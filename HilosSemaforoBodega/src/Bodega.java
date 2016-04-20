@@ -70,7 +70,9 @@ public class Bodega {
         art2Disp.acquire(4);
         
         artDisp.acquire(90);
+        mutexC.acquire();
         cant-=90;
+        mutexC.realease();
         espDisp.release(90);
         
         mutex1.acquire();
